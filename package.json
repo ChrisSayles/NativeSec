@@ -27,6 +27,7 @@
     "react-fontawesome": "^1.6.1",
     "react-native": "^0.50.4",
     "react-native-accordion": "^1.0.1",
+    "react-native-accordions": "^1.0.3",
     "react-native-collapsible": "^0.10.0",
     "react-native-swipe-gestures": "^1.0.2",
     "watchman": "^1.0.0"

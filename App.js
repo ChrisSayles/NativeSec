@@ -12,9 +12,7 @@ import PickCategory from './components/pickerComponent.js';
 import FooterComponent from './components/footerComponent.js';
 import BlankCard from './components/blankCard.js';
 import SwipeableList from './components/accordion.js';
-
-
-
+import SwipeTouch from './components/accordionSwipe.js';
 
 
 
@@ -27,7 +25,8 @@ export default class App extends React.Component {
       <View style={styles.container}>
         <Text>Project:CASB Mobile Application</Text>
         <ImageDisplay />
-        <SwipeableList />
+        <SwipeTouch />
+
 
       </View>
       

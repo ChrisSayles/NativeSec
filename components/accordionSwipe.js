@@ -12,7 +12,7 @@ const datas = [
 
 
 
-export default class SwipeableList extends Component {
+export default class SwipeTouch extends Component {
   constructor(props) {
     super(props);
     this.ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
@@ -26,6 +26,9 @@ export default class SwipeableList extends Component {
     const newData = [...this.state.listViewData];
     newData.splice(rowId, 1);
     this.setState({ listViewData: newData });
+  }
+  _onPressButton() {
+    Alert.alert('You tapped the button!')
   }
 
   
@@ -41,9 +44,11 @@ export default class SwipeableList extends Component {
             dataSource={this.ds.cloneWithRows(this.state.listViewData)}
             renderRow={data =>
               <ListItem>
-                <Text> {data} </Text>
+              <Button style={styles.buttonBackground} full onPress={() => alert(data)}>
+                <Text style={styles.textColor}> {data} </Text>
+              </Button>
               </ListItem>}
-            renderLeftHiddenRow={data =>
+              renderLeftHiddenRow={data =>
               <Button full onPress={() => alert(data)}>
                 <Icon active name="information-circle" />
               </Button>}
@@ -78,7 +83,21 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     fontWeight: 'bold',
     fontSize: 30
-}
+},
+  buttonBackground: {
+    backgroundColor: 'white',
+    // borderBottomRadius: 4,
+    // borderBottomWidth: 0.5,
+    // borderColor: 'black',
+
+  },
+  textColor: {
+    color: 'black',
+    fontSize: 20,
+    fontWeight: 'bold',
+    width: 375,
+    textAlign: 'center',
+  }
 })
 
 ;
