@@ -11,6 +11,7 @@ import Swiping from './components/swipeDeck.js';
 import PickCategory from './components/pickerComponent.js';
 import FooterComponent from './components/footerComponent.js';
 import BlankCard from './components/blankCard.js';
+import SwipeableList from './components/accordion.js';
 
 
 
@@ -26,9 +27,7 @@ export default class App extends React.Component {
       <View style={styles.container}>
         <Text>Project:CASB Mobile Application</Text>
         <ImageDisplay />
-        <PickCategory />
-        <BlankCard />
-        <FooterComponent />
+        <SwipeableList />
 
       </View>
       

@@ -1,41 +1,67 @@
-var Accordion = require('react-native-accordion');
- 
-var YourComponent = React.createClass({
-  getInitialState() {
-    var ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
-    return {
-      dataSource: ds.cloneWithRows(_.range(25)),
+import React, { Component } from 'react';
+import { ListView, StyleSheet } from 'react-native';
+import { Container, Header, Content, Button, Icon, List, ListItem, Text } from 'native-base';
+const datas = [
+  'Simon Mignolet',
+  'Nathaniel Clyne',
+  'Dejan Lovren',
+  'Mama Sakho',
+  'Alberto Moreno',
+  'Emre Can',
+  'Joe Allen',
+  'Phil Coutinho',
+];
+export default class SwipeableList extends Component {
+  constructor(props) {
+    super(props);
+    this.ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
+    this.state = {
+      basic: true,
+      listViewData: datas,
     };
-  },
- 
+  }
+  deleteRow(secId, rowId, rowMap) {
+    rowMap[`${secId}${rowId}`].props.closeRow();
+    const newData = [...this.state.listViewData];
+    newData.splice(rowId, 1);
+    this.setState({ listViewData: newData });
+  }
   render() {
+    const ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
     return (
-      <ListView
-        dataSource={this.state.dataSource}
-        renderRow={this._renderRow}
-      />
-    );
-  },
- 
-  _renderRow() {
-    var header = (
-      <View style={...}>
-        <Text>Click to Expand</Text>
-      </View>
-    );
- 
-    var content = (
-      <View style={...}>
-        <Text>This content is hidden in the accordion</Text>
-      </View>
-    );
- 
-    return (
-      <Accordion
-        header={header}
-        content={content}
-        easing="easeOutCubic"
-      />
+      <Container style={styles.container}>
+        <Header />
+        <Content>
+          <List
+            dataSource={this.ds.cloneWithRows(this.state.listViewData)}
+            renderRow={data =>
+              <ListItem>
+                <Text> {data} </Text>
+              </ListItem>}
+            renderLeftHiddenRow={data =>
+              <Button full onPress={() => alert(data)}>
+                <Icon active name="information-circle" />
+              </Button>}
+            renderRightHiddenRow={(data, secId, rowId, rowMap) =>
+              <Button full danger onPress={_ => this.deleteRow(secId, rowId, rowMap)}>
+                <Icon active name="trash" />
+              </Button>}
+            leftOpenValue={75}
+            rightOpenValue={-75}
+          />
+        </Content>
+      </Container>
     );
   }
-});
+}
+const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      width: 375,
+      height: 800,
+      marginTop: -400,
+      backgroundColor: '#000000',
+    },
+})
+
+;
