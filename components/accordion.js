@@ -2,14 +2,9 @@ import React, { Component } from 'react';
 import { ListView, StyleSheet } from 'react-native';
 import { Container, Header, Content, Button, Icon, List, ListItem, Text } from 'native-base';
 const datas = [
-  'Simon Mignolet',
-  'Nathaniel Clyne',
-  'Dejan Lovren',
-  'Mama Sakho',
-  'Alberto Moreno',
-  'Emre Can',
-  'Joe Allen',
-  'Phil Coutinho',
+  'High Risk',
+  'Medium Risk',
+  'Low Risk'
 ];
 export default class SwipeableList extends Component {
   constructor(props) {
@@ -30,7 +25,9 @@ export default class SwipeableList extends Component {
     const ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
     return (
       <Container style={styles.container}>
-        <Header />
+        <Header style={styles.swipeHeader} >
+          <Text>Instance Type</Text>
+        </Header>
         <Content>
           <List
             dataSource={this.ds.cloneWithRows(this.state.listViewData)}
@@ -59,9 +56,15 @@ const styles = StyleSheet.create({
       flex: 1,
       width: 375,
       height: 800,
-      marginTop: -400,
+      marginTop: -200,
       backgroundColor: '#000000',
     },
+  swipeHeader: {
+    flex: 1,
+    backgroundColor: '#f80000',
+    height: 400,
+    marginTop: -100,
+}
 })
 
 ;
