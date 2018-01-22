@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
 import { ListView, StyleSheet } from 'react-native';
+import FontAwesome from 'react-fontawesome';
 import { Container, Header, Content, Button, Icon, List, ListItem, Text } from 'native-base';
 const datas = [
   'High Risk',
   'Medium Risk',
   'Low Risk'
 ];
+
+
+
+
+
 export default class SwipeableList extends Component {
   constructor(props) {
     super(props);
@@ -26,7 +32,7 @@ export default class SwipeableList extends Component {
     return (
       <Container style={styles.container}>
         <Header style={styles.swipeHeader} >
-          <Text>Instance Type</Text>
+          <Text style={styles.swipeHeaderText}>Instance Type</Text>
         </Header>
         <Content>
           <List
@@ -57,13 +63,19 @@ const styles = StyleSheet.create({
       width: 375,
       height: 800,
       marginTop: -200,
-      backgroundColor: '#000000',
+      backgroundColor: '#324b5c',
     },
   swipeHeader: {
     flex: 1,
     backgroundColor: '#f80000',
-    height: 400,
     marginTop: -100,
+    fontSize: 30
+},
+  swipeHeaderText: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    fontWeight: 'bold',
+    fontSize: 30
 }
 })
 

@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
       height: 800,
       marginTop: -100,
       marginBottom: 60,
-      backgroundColor: '#000000',
+      backgroundColor: '#324b5c',
     },
 })
 

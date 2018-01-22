@@ -20,9 +20,11 @@
   },
   "dependencies": {
     "expo": "^23.0.4",
+    "font-awesome": "^4.7.0",
     "link": "^0.1.5",
     "native-base": "^2.3.6",
     "react": "16.0.0",
+    "react-fontawesome": "^1.6.1",
     "react-native": "^0.50.4",
     "react-native-accordion": "^1.0.1",
     "react-native-collapsible": "^0.10.0",

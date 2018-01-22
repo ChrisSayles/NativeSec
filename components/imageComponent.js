@@ -19,14 +19,15 @@ export default class ImageDisplay extends Component {
 const componentStyle = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#000000',
+    backgroundColor: '#324b5c',
+    marginTop: -20
 
   },
 })
 
 const imageStyle = StyleSheet.create({
   image: {
-    flex: 2,
+    flex: 1,
     resizeMode: "cover",
 
   },
