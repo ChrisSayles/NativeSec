@@ -13,8 +13,9 @@ import FooterComponent from './components/footerComponent.js';
 import BlankCard from './components/blankCard.js';
 import SwipeableList from './components/accordion.js';
 import SwipeTouch from './components/accordionSwipe.js';
-
-
+import YourComponent from './components/accordionTest.js';
+import CategoryLinks from './components/accordionTest2.js';
+import Chooser from './components/chooser.js';
 
 
 
@@ -26,8 +27,6 @@ export default class App extends React.Component {
         <Text>Project:CASB Mobile Application</Text>
         <ImageDisplay />
         <SwipeTouch />
-
-
       </View>
       
     );
