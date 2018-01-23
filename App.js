@@ -16,6 +16,7 @@ import SwipeTouch from './components/accordionSwipe.js';
 import YourComponent from './components/accordionTest.js';
 import CategoryLinks from './components/accordionTest2.js';
 import Chooser from './components/chooser.js';
+import CardList from './components/cardList.js';
 
 
 
@@ -26,7 +27,7 @@ export default class App extends React.Component {
       <View style={styles.container}>
         <Text>Project:CASB Mobile Application</Text>
         <ImageDisplay />
-        <SwipeTouch />
+        <CardList />
       </View>
       
     );
