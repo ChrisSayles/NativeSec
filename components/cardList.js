@@ -31,80 +31,14 @@ export default class CardList extends Component {
                       style={styles.backgroundColor}
                       onPress={() =>
                 this.navigate('RiskScreen')}>
-                  <Text style={styles.text}>{JSON.stringify(data.riskevent.appname).slice(1,-1)}</Text>
+                  <Text style={styles.text}>{JSON.stringify(data.riskevents[0].appname).slice(1,-1)}</Text>
               </Button>
                     <Right>
                       <Icon name="arrow-forward" />
                    </Right>
              </CardItem>
              
-             <CardItem>
-                <Icon active name="ios-warning" />
-                      <Button 
-                      style={styles.backgroundColor}
-                      onPress={() =>
-                this.navigate('RiskScreen')}>
-                  <Text style={styles.text}>Box</Text>
-              </Button>
-                    <Right>
-                      <Icon name="arrow-forward" />
-                   </Right>
-             </CardItem>
-
-
-             <CardItem>
-                <Icon active name="ios-warning" />
-                      <Button 
-                      style={styles.backgroundColor}
-                      onPress={() =>
-                this.navigate('RiskScreen')}>
-                  <Text style={styles.text}>GitHub</Text>
-              </Button>
-                    <Right>
-                      <Icon name="arrow-forward" />
-                   </Right>
-             </CardItem>
-
              
-             <CardItem>
-                <Icon active name="ios-warning" />
-                      <Button 
-                      style={styles.backgroundColor}
-                      onPress={() =>
-                this.navigate('RiskScreen')}>
-                  <Text style={styles.text}>SalesForce</Text>
-              </Button>
-                    <Right>
-                      <Icon name="arrow-forward" />
-                   </Right>
-             </CardItem>
-
-             <CardItem>
-                <Icon active name="ios-warning" />
-                      <Button 
-                      style={styles.backgroundColor}
-                      onPress={() =>
-                this.navigate('RiskScreen')}>
-                  <Text style={styles.text}>Office 365</Text>
-              </Button>
-                    <Right>
-                      <Icon name="arrow-forward" />
-                   </Right>
-             </CardItem>
-
-
-              <CardItem>
-                <Icon active name="ios-warning" />
-                      <Button 
-                      style={styles.backgroundColor}
-                      onPress={() =>
-                this.navigate('RiskScreen')}>
-                  <Text style={styles.text}>OracleHCM</Text>
-              </Button>
-                    <Right>
-                      <Icon name="arrow-forward" />
-                   </Right>
-             </CardItem>
           
            </Card>
         </Content>
