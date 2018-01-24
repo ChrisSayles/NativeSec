@@ -18,7 +18,6 @@ export default class App extends React.Component {
 const AppNavigator = StackNavigator({
   HomeScreen: { screen: HomeScreen},
   RiskScreen: { screen: RiskScreen},
-  CardList: { screen: CardList}
 
 })
 

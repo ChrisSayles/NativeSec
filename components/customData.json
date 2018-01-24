@@ -1,17 +1,40 @@
-[
-    {
-      "id": 1,
-      "gender": "Female",
-      "first_name": "Helen",
-      "last_name": "Nguyen",
-      "email": "hnguyen0@bloomberg.com",
-      "ip_address": "227.211.25.18",
-    }, {
-      "id": 2,
-      "gender": "Male",
-      "first_name": "Carlos",
-      "last_name": "Fowler",
-      "email": "cfowler1@gnu.org",
-      "ip_address": "214.248.201.11"
-    }
-]
+{
+  "riskevent": {
+    "id": "a542db60-b8d0-11e7-a152-95f25b3653b3",
+    "uri": "/v1/events/riskevent?eventId=a542db60-b8d0-11e7-a152-95f25b3653b3=bd4716ef-d9b3-4348-8793-347134edce7a",
+    "appname": "SFDC",
+    "appinstance": "publiceventsapi",
+    "appinstanceid": "64909d3d-3855-5de1-49ed-6452ae9f6365",
+    "snapdate": "2017-10-24",
+    "title": "Enforce password history",
+    "additionalDetails": [
+      {
+        "Details": [
+          {
+            "name": "Scan details",
+            "value": "Initial Oracle CASB Cloud Service scan"},
+          {
+            "name": "Security control name",
+            "value": "Enforce password history"},
+          {
+            "name": "Current value",
+            "value": "No passwords remembered"},
+          {
+            "name": "Recommended value",
+            "value": "5 passwords remembered"},
+          {
+            "name": "Message",
+            "value": "Non-compliant security setting"},
+          {
+            "name": "Occurred",
+            "value": "2017-10-24T15:33:12Z"}
+        ]}
+    ],
+    "category": "Security control",
+    "priority": "High",
+    "status": "Open",
+    "createdon": "2017-10-24T15:33:12.342Z",
+    "realeventtime": "2017-10-24T15:33:12.342Z",
+    "lastevent": "2017-10-24T15:33:12.342Z"},
+  "tenantId": "e7d56a92-dacf-6fda-c53b-89c87792ed20"
+}
