@@ -60,7 +60,7 @@ export default class SwipeTouch extends Component {
     return (
       <Container style={styles.container}>
         <Header style={styles.swipeHeader} >
-          <Text style={styles.swipeHeaderText}>Instance Type</Text>
+          <Text style={styles.swipeHeaderText}>AWS RISK</Text>
         </Header>
         <Content>
           <List
