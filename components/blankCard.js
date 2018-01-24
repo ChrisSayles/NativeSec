@@ -25,7 +25,7 @@ export default class BlankCard extends Component {
                   <Left>
                     <Thumbnail source={item.imageicon} />
                     <Body>
-                      <Text>{data[0].gender + "\n" + data[0].first_name}</Text>
+                      <Text>{JSON.stringify(data.riskevent.additionalDetails)}</Text>
                     </Body>
                   </Left>
                 </CardItem>

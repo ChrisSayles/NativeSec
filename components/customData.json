@@ -1,40 +1,102 @@
 {
-  "riskevent": {
-    "id": "a542db60-b8d0-11e7-a152-95f25b3653b3",
-    "uri": "/v1/events/riskevent?eventId=a542db60-b8d0-11e7-a152-95f25b3653b3=bd4716ef-d9b3-4348-8793-347134edce7a",
-    "appname": "SFDC",
-    "appinstance": "publiceventsapi",
-    "appinstanceid": "64909d3d-3855-5de1-49ed-6452ae9f6365",
-    "snapdate": "2017-10-24",
-    "title": "Enforce password history",
-    "additionalDetails": [
-      {
-        "Details": [
+  "riskevents": [{
+      "id": "aa1eab35-6d84-3f5a-a9b5-3e1509bad244",
+      "uri": "/v1/events/riskevent?eventId=aa1eab35-6d84-3f5a-a9b5-3e1509bad244=5786ed4c-3527-413d-9d19-da93d0f065c8",
+      "appname": "AWS",
+      "appinstance": "awse2e_01",
+      "appinstanceid": "64909d3d-3855-5de1-49ed-6452ae9f6365",
+      "snapdate": "2017-10-25",
+      "title": "DeleteSecurityGroup action in EC2 SecurityGroup \"JKSecurityGroup\"",
+      "additionalDetails": [{
+        "Details": [{
+            "name": "Actor",
+            "value": "funct_test_nonservice"
+          },
           {
-            "name": "Scan details",
-            "value": "Initial Oracle CASB Cloud Service scan"},
+            "name": "Resource type",
+            "value": "EC2 SecurityGroup"
+          },
           {
-            "name": "Security control name",
-            "value": "Enforce password history"},
+            "name": "Group",
+            "value": "JKSecurityGroup"
+          },
           {
-            "name": "Current value",
-            "value": "No passwords remembered"},
+            "name": "Resource name",
+            "value": "[JKSecurityGroup]"
+          },
           {
-            "name": "Recommended value",
-            "value": "5 passwords remembered"},
+            "name": "Action",
+            "value": "DeleteSecurityGroup"
+          },
           {
-            "name": "Message",
-            "value": "Non-compliant security setting"},
+            "name": "Policy alert name",
+            "value": "EC2 - Instances Network Routes Network ACL VPN and Security Group changes"
+          },
           {
             "name": "Occurred",
-            "value": "2017-10-24T15:33:12Z"}
-        ]}
-    ],
-    "category": "Security control",
-    "priority": "High",
-    "status": "Open",
-    "createdon": "2017-10-24T15:33:12.342Z",
-    "realeventtime": "2017-10-24T15:33:12.342Z",
-    "lastevent": "2017-10-24T15:33:12.342Z"},
-  "tenantId": "e7d56a92-dacf-6fda-c53b-89c87792ed20"
+            "value": "2017-10-25T17:17:29Z"
+          },
+          {
+            "name": "recommendationkey",
+            "value": "AWS~PolicyAlert~ec2deletesecuritygroup"
+          }
+        ]
+      }],
+      "category": "Policy alert",
+      "priority": "High",
+      "status": "Open",
+      "createdon": "2017-10-25T17:33:55.000Z",
+      "realeventtime": "2017-10-25T17:17:29.000Z"
+    },
+    {
+      "id": "1b098639-8965-3f0d-aa2b-5c92ef23ad2e",
+
+      "uri": "/v1/events/riskevent?eventId=1b098639-8965-3f0d-aa2b-5c92ef23ad2e=5786ed4c-3527-413d-9d19-da93d0f065c8",
+      "appname": "AWS",
+      "appinstance": "awse2e_01",
+      "appinstanceid": "e4dc5876-7253-3d41-911d-0f065c8da93d",
+      "snapdate": "2017-10-25",
+      "title": "DeleteVpnConnection action in EC2 VPN \"vpn-de0d1fbf\"",
+      "additionalDetails": [{
+        "Details": [{
+            "name": "Actor",
+            "value": "funct_test_nonservice"
+          },
+          {
+            "name": "Resource type",
+            "value": "EC2 VPN"
+          },
+          {
+            "name": "Resource name",
+            "value": "[vpn-de0d1fbf]"
+          },
+          {
+            "name": "Action",
+            "value": "DeleteVpnConnection"
+          },
+          {
+            "name": "Policy alert name",
+            "value": "EC2 - Instances Network Routes Network ACL VPN and Security Group changes"
+          },
+          {
+            "name": "Occurred",
+            "value": "2017-10-25T17:17:44Z"
+          },
+          {
+            "name": "recommendationkey",
+            "value": "AWS~PolicyAlert~ec2deletevpnconnection"
+          }
+        ]
+      }],
+      "category": "Policy alert",
+      "priority": "High",
+      "status": "Open",
+      "createdon": "2017-10-25T17:33:56.000Z",
+      "realeventtime": "2017-10-25T17:17:44.000Z"
+    }
+  ],
+  "tenantId": "e7d56a92-dacf-6fda-c53b-89c87792ed20",
+  "nextMarkerPosition": "1508952846000",
+  "maxCount": 100,
+  "size": 10
 }

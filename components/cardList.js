@@ -3,8 +3,11 @@ import { Image, StyleSheet } from 'react-native';
 import { Container, Header, Content, Card, CardItem, Text, Icon, Right, Button } from 'native-base';
 import FontAwesome, { Icons } from 'react-native-fontawesome';
 import {StackNavigator} from 'react-navigation';
+import data from './customData.json';
 
-
+var escapeJSON = function(str) {
+    return str.replace(/\\/g,'\\');
+};
 
 
 export default class CardList extends Component {
@@ -28,7 +31,7 @@ export default class CardList extends Component {
                       style={styles.backgroundColor}
                       onPress={() =>
                 this.navigate('RiskScreen')}>
-                  <Text style={styles.text}>AWS</Text>
+                  <Text style={styles.text}>{JSON.stringify(data.riskevent.appname).slice(1,-1)}</Text>
               </Button>
                     <Right>
                       <Icon name="arrow-forward" />
