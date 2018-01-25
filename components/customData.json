@@ -93,6 +93,144 @@
       "status": "Open",
       "createdon": "2017-10-25T17:33:56.000Z",
       "realeventtime": "2017-10-25T17:17:44.000Z"
+    },
+     {
+      "id": "1b098639-8965-3f0d-aa2b-5c92ef23ad2e",
+
+      "uri": "/v1/events/riskevent?eventId=1b098639-8965-3f0d-aa2b-5c92ef23ad2e=5786ed4c-3527-413d-9d19-da93d0f065c8",
+      "appname": "AWS",
+      "appinstance": "box_01",
+      "appinstanceid": "e4dc5876-7253-3d41-911d-0f065c8da93d",
+      "snapdate": "2017-10-25",
+      "title": "DeleteVpnConnection action in EC2 VPN \"vpn-de0d1fbf\"",
+      "additionalDetails": [{
+        "Details": [{
+            "name": "Actor",
+            "value": "funct_test_nonservice"
+          },
+          {
+            "name": "Resource type",
+            "value": "EC2 VPN"
+          },
+          {
+            "name": "Resource name",
+            "value": "[vpn-de0d1fbf]"
+          },
+          {
+            "name": "Action",
+            "value": "DeleteVpnConnection"
+          },
+          {
+            "name": "Policy alert name",
+            "value": "EC2 - Instances Network Routes Network ACL VPN and Security Group changes"
+          },
+          {
+            "name": "Occurred",
+            "value": "2017-10-25T17:17:44Z"
+          },
+          {
+            "name": "recommendationkey",
+            "value": "AWS~PolicyAlert~ec2deletevpnconnection"
+          }
+        ]
+      }],
+      "category": "Policy alert",
+      "priority": "High",
+      "status": "Open",
+      "createdon": "2017-10-25T17:33:56.000Z",
+      "realeventtime": "2017-10-25T17:17:44.000Z"
+    },
+     {
+      "id": "1b098639-8965-3f0d-aa2b-5c92ef23ad2e",
+
+      "uri": "/v1/events/riskevent?eventId=1b098639-8965-3f0d-aa2b-5c92ef23ad2e=5786ed4c-3527-413d-9d19-da93d0f065c8",
+      "appname": "AWS",
+      "appinstance": "Office_365",
+      "appinstanceid": "e4dc5876-7253-3d41-911d-0f065c8da93d",
+      "snapdate": "2017-10-25",
+      "title": "DeleteVpnConnection action in EC2 VPN \"vpn-de0d1fbf\"",
+      "additionalDetails": [{
+        "Details": [{
+            "name": "Actor",
+            "value": "funct_test_nonservice"
+          },
+          {
+            "name": "Resource type",
+            "value": "EC2 VPN"
+          },
+          {
+            "name": "Resource name",
+            "value": "[vpn-de0d1fbf]"
+          },
+          {
+            "name": "Action",
+            "value": "DeleteVpnConnection"
+          },
+          {
+            "name": "Policy alert name",
+            "value": "EC2 - Instances Network Routes Network ACL VPN and Security Group changes"
+          },
+          {
+            "name": "Occurred",
+            "value": "2017-10-25T17:17:44Z"
+          },
+          {
+            "name": "recommendationkey",
+            "value": "AWS~PolicyAlert~ec2deletevpnconnection"
+          }
+        ]
+      }],
+      "category": "Policy alert",
+      "priority": "High",
+      "status": "Open",
+      "createdon": "2017-10-25T17:33:56.000Z",
+      "realeventtime": "2017-10-25T17:17:44.000Z"
+    },
+     {
+      "id": "1b098639-8965-3f0d-aa2b-5c92ef23ad2e",
+
+      "uri": "/v1/events/riskevent?eventId=1b098639-8965-3f0d-aa2b-5c92ef23ad2e=5786ed4c-3527-413d-9d19-da93d0f065c8",
+      "appname": "AWS",
+      "appinstance": "Oracle",
+      "appinstanceid": "e4dc5876-7253-3d41-911d-0f065c8da93d",
+      "snapdate": "2017-10-25",
+      "title": "DeleteVpnConnection action in EC2 VPN \"vpn-de0d1fbf\"",
+      "additionalDetails": [{
+        "Details": [{
+            "name": "Actor",
+            "value": "funct_test_nonservice"
+          },
+          {
+            "name": "Resource type",
+            "value": "EC2 VPN"
+          },
+          {
+            "name": "Resource name",
+            "value": "[vpn-de0d1fbf]"
+          },
+          {
+            "name": "Action",
+            "value": "DeleteVpnConnection"
+          },
+          {
+            "name": "Policy alert name",
+            "value": "EC2 - Instances Network Routes Network ACL VPN and Security Group changes"
+          },
+          {
+            "name": "Occurred",
+            "value": "2017-10-25T17:17:44Z"
+          },
+          {
+            "name": "recommendationkey",
+            "value": "AWS~PolicyAlert~ec2deletevpnconnection"
+          }
+        ]
+      }],
+      "category": "Policy alert",
+      "priority": "High",
+      "status": "Open",
+      "createdon": "2017-10-25T17:33:56.000Z",
+      "realeventtime": "2017-10-25T17:17:44.000Z"
     }
   ],
   "tenantId": "e7d56a92-dacf-6fda-c53b-89c87792ed20",

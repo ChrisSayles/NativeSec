@@ -9,35 +9,43 @@ import data from './customData.json';
 export default class CardList extends Component {
    constructor(props) {
     super(props);
-    this.navigate = this.props.navigation.navigate;  
+    this.navigate = this.props.navigation.navigate; 
+    this.state = {items: []} 
+  }
+  componentWillMount(){
+    fetch( './customData.json')
+    .then( response => response.json() )
+    .then( ({results: items}) => this.setState({items}))
   }
   
 
   render() {  
-
-    const renderCards = (results) => results.riskevents.map(result => (
-      <Card>
-        <CardItem>
-            <Icon active name="ios-warning" />
-                  <Button 
-                  style={styles.backgroundColor}
-                  onPress={() => this.navigate('RiskScreen')}>
-              <Text style={styles.text}>{JSON.stringify(result.appinstance).slice(1,-1)}</Text>
-          </Button>
-                <Right>
-                  <Icon name="arrow-forward" />
-               </Right>
-         </CardItem>      
-        </Card>
-    ));
-
+    let items=this.state.items 
     return (
+  
       <Container style={styles.container}>
+
         <Header>
           <Text>Select an Instance</Text>
         </Header>
         <Content>
-          {renderCards(data)}
+          <Card>
+            <CardItem>
+                <Icon active name="ios-warning" />
+                      <Button 
+                      style={styles.backgroundColor}
+                      onPress={() =>
+                this.navigate('RiskScreen')}>
+                  <Text style={styles.text}>{JSON.stringify(data.riskevents[0].appname).slice(1,-1)}</Text>
+              </Button>
+                    <Right>
+                      <Icon name="arrow-forward" />
+                   </Right>
+             </CardItem>
+             
+             
+          
+           </Card>
         </Content>
       </Container>
     );
