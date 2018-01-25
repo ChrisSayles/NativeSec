@@ -6,6 +6,7 @@ import {StackNavigator} from 'react-navigation';
 import data from './customData.json';
 
 
+
 export default class CardList extends Component {
    constructor(props) {
     super(props);
@@ -24,15 +25,15 @@ export default class CardList extends Component {
       }
     });
 
-
+    
 
     const renderCards = (results) => results.map(result => (
-      <Card>
-        <CardItem>
+      <Card >
+        <CardItem button onPress={() => this.navigate('RiskScreen', {selectedInstance: result})}>
             <Icon active name="ios-warning" />
                   <Button 
                   style={styles.backgroundColor}
-                  onPress={() => this.navigate('RiskScreen')}>
+                  >
               <Text style={styles.text}>{result}</Text>
           </Button>
                 <Right>
