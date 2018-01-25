@@ -15,14 +15,25 @@ export default class CardList extends Component {
 
   render() {  
 
-    const renderCards = (results) => results.riskevents.map(result => (
+    let instances = [];
+
+
+    data.riskevents.map(riskevent => {
+      if(!instances.includes(riskevent.appinstance)){
+        instances.push(riskevent.appinstance);
+      }
+    });
+
+
+
+    const renderCards = (results) => results.map(result => (
       <Card>
         <CardItem>
             <Icon active name="ios-warning" />
                   <Button 
                   style={styles.backgroundColor}
                   onPress={() => this.navigate('RiskScreen')}>
-              <Text style={styles.text}>{JSON.stringify(result.appinstance).slice(1,-1)}</Text>
+              <Text style={styles.text}>{result}</Text>
           </Button>
                 <Right>
                   <Icon name="arrow-forward" />
@@ -37,7 +48,7 @@ export default class CardList extends Component {
           <Text>Select an Instance</Text>
         </Header>
         <Content>
-          {renderCards(data)}
+          {renderCards(instances)}
         </Content>
       </Container>
     );
