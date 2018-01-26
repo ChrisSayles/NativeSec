@@ -2,7 +2,20 @@ import React, { Component } from 'react';
 import { ListView, StyleSheet } from 'react-native';
 import { Container, Header, Content, List, ListItem, Text, Separator } from 'native-base';
 export default class ListSeparator extends Component {
+
+
+  constructor(props) {
+    super(props);
+    this.selectedInstance = this.props.clickedInstance; 
+  }
+
+  
+
+
   render() {
+    //console.log("List seperator: " + this.props.clickedInstance);
+    console.log("List seperator: " + this.selectedInstance);
+
     return (
       <Container style={styles.container}>
         <Content>
