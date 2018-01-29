@@ -31,6 +31,7 @@
     "react-native-accordion": "^1.0.1",
     "react-native-accordions": "^1.0.3",
     "react-native-collapsible": "^0.10.0",
+    "react-native-easy-grid": "^0.1.17",
     "react-native-expandable-section-flatlist": "^1.0.3",
     "react-native-fontawesome": "^5.7.0",
     "react-native-material-ui": "^1.19.0",

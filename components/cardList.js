@@ -28,8 +28,10 @@ export default class CardList extends Component {
     
 
     const renderCards = (results) => results.map(result => (
-      <Card >
-        <CardItem button onPress={() => this.navigate('RiskScreen', {selectedInstance: result})}>
+      <Card style={styles.backgroundColor}>
+        <CardItem 
+        style={styles.backgroundColor}
+        button onPress={() => this.navigate('RiskScreen', {selectedInstance: result})}>
             <Icon active name="ios-warning" />
                   <Button 
                   style={styles.backgroundColor}
@@ -45,9 +47,7 @@ export default class CardList extends Component {
 
     return (
       <Container style={styles.container}>
-        <Header>
-          <Text>Select an Instance</Text>
-        </Header>
+        
         <Content>
           {renderCards(instances)}
         </Content>
@@ -62,14 +62,15 @@ const styles = StyleSheet.create({
       height: 800,
       marginTop: -300,
       marginBottom: 60,
-      backgroundColor: '#000000',
+      backgroundColor: '#809ab0',
     },
     text: {
-      backgroundColor: 'white',
-      color: 'black'
+      backgroundColor: '#687785',
+      color: 'white'
     },
     backgroundColor: {
-      backgroundColor: 'white'
+      backgroundColor: '#687785',
+      
     }
 })
 

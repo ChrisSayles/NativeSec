@@ -9,9 +9,6 @@ export default class ListSeparator extends Component {
     this.selectedInstance = this.props.clickedInstance; 
   }
 
-  
-
-
   render() {
     //console.log("List seperator: " + this.props.clickedInstance);
     console.log("List seperator: " + this.selectedInstance);
@@ -19,11 +16,11 @@ export default class ListSeparator extends Component {
     return (
       <Container style={styles.container}>
         <Content>
-          <Separator bordered>
-            <Text>HIGH</Text>
+          <Separator bordered style={styles.swipeHeader}>
+            <Text style={styles.swipeHeaderText}>HIGH</Text>
           </Separator>
           <ListItem >
-            <Text>DDOS</Text>
+            <Text >DDOS</Text>
           </ListItem>
           <ListItem>
             <Text>Admin Changes</Text>
@@ -31,14 +28,14 @@ export default class ListSeparator extends Component {
           <ListItem last>
             <Text>Multiple IP's</Text>
           </ListItem>
-          <Separator bordered>
-            <Text>MEDIUM</Text>
+          <Separator bordered style={styles.swipeHeader}>
+            <Text style={styles.swipeHeaderText}>MEDIUM</Text>
           </Separator>
           <ListItem>
             <Text>Copied Folder</Text>
           </ListItem>
-          <Separator bordered>
-            <Text>Low</Text>
+          <Separator bordered style={styles.swipeHeader}>
+            <Text style={styles.swipeHeaderText}>LOW</Text>
           </Separator>
           <ListItem last>
             <Text>Invalid Password</Text>
@@ -59,19 +56,19 @@ const styles = StyleSheet.create({
       width: 375,
       height: 800,
       marginTop: -340,
-      backgroundColor: 'white',
+      backgroundColor: '#809ab0',
     },
   swipeHeader: {
-    flex: 1,
-    backgroundColor: 'red',
-    marginTop: -100,
-    fontSize: 30
+
+    backgroundColor: '#687785',
+    color: 'white',
+    fontWeight: 'bold'
+
 },
   swipeHeaderText: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    fontWeight: 'bold',
-    fontSize: 30
+    backgroundColor: '#687785',
+    color: 'white',
+    fontWeight: 'bold'
 }
 })
 
