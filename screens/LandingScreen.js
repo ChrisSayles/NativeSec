@@ -15,7 +15,7 @@ class Dashboard extends Component{
 		return (
 		<View style={styles.container}>
           
-          <DashboardContent />
+          <DashboardContent navigation={this.props.navigation}/>
           <ImageDisplay />
       
 		</View>

@@ -19,9 +19,8 @@ export default class App extends React.Component {
 }
 
 const AppNavigator = StackNavigator({
-   TestScreen: { screen: TestScreen},
   Dashboard: { screen: Dashboard},
- 
+  TestScreen: { screen: TestScreen}, 
   HomeScreen: { screen: HomeScreen},
   RiskScreen: { screen: RiskScreen},
   

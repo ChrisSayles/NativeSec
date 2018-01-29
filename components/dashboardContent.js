@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import {
-	View,
-	StyleSheet,
+  View,
+  StyleSheet,
   Image,
-  Button
+  Button,
+
 } from 'react-native';
 import { Text, Container, Header } from 'native-base';
 import { Col, Row, Grid } from "react-native-easy-grid";
@@ -14,15 +15,15 @@ import { Col, Row, Grid } from "react-native-easy-grid";
 class DashboardContent extends Component{
   
   
-	render(){
-		return (
-		<Container style={styles.container}>
-			<Grid>
+  render(){
+    return (
+    <Container style={styles.container}>
+      <Grid>
     <Col>
         <Row style={styles.box1}>
           <Button onPress={() =>
-            this.props.navigation.navigation('TestScreen')}
-            title="go to the TestScreen" />
+            this.props.navigation.navigate('Dashboard')}
+            title="go to the Dashboard" />
 
             <Image style={styles.dashboardImg}
             source={require('../assets/dashboard.png')}
@@ -31,6 +32,9 @@ class DashboardContent extends Component{
 
         </Row>
         <Row style={styles.box2}>
+        <Button onPress={() =>
+            this.props.navigation.navigate('HomeScreen')}
+            title="Go to Homescreen" />
             <Image style={styles.dashboardImg}
             source={require('../assets/cloud.png')}
             />
@@ -39,6 +43,9 @@ class DashboardContent extends Component{
     </Col>
     <Col>
         <Row style={styles.box3}>
+        <Button onPress={() =>
+            this.props.navigation.navigate('RiskScreen')}
+            title="go to the RiskScreen" />
           <Image style={styles.dashboardImg}
             source={require('../assets/riskevents.png')}
             />
@@ -52,10 +59,10 @@ class DashboardContent extends Component{
         </Row>
     </Col>
 </Grid>
-		</Container>
-			)
-		}
-	};
+    </Container>
+      )
+    }
+  };
 
 const styles = StyleSheet.create({
     box1: {
@@ -107,7 +114,7 @@ const styles = StyleSheet.create({
       width: 100,
     },
   container: {
-  	flex: 0,
+    flex: 0,
     width: 370,
     height: 500
 },

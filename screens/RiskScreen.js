@@ -30,7 +30,7 @@ class RiskScreen extends Component{
 			<View style={styles.container}>
           <Text >  { params.selectedInstance }  </Text>
           <ImageDisplay />
-          <ListSeperator clickedInstance = {params.selectedInstance}/>
+          <ListSeperator clickedInstance = {params.selectedInstance} />
 			</View>
 			);
 
