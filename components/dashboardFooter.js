@@ -2,15 +2,13 @@ import React, { Component } from 'react';
 import { AppRegistry, View, Image, StyleSheet } from 'react-native';
 import LocalImage from './LocalImage';
 
-export default class ImageDisplay extends Component {
+export default class CloudLock extends Component {
   render() {
     return (
       <View style={componentStyle.container}>
-        <LocalImage
-        source={require('../assets/FullLogo.png')}
-        originalWidth={750}
-        originalHeight={427}
-        />
+        <Image style={imageStyle.image}
+            source={require('../assets/CloudLock.png')}
+            />
       </View>
     );
   }
@@ -18,8 +16,8 @@ export default class ImageDisplay extends Component {
 
 const componentStyle = StyleSheet.create({
   container: {
-    flex: 0,
-    backgroundColor: 'white',
+    flex: 1,
+    backgroundColor: '#809ab0',
     // marginTop: -20
 
   },
@@ -27,8 +25,10 @@ const componentStyle = StyleSheet.create({
 
 const imageStyle = StyleSheet.create({
   image: {
-    flex: 0,
-    resizeMode: "cover",
+    height: 150,
+      width: 375,
+      backgroundColor: 'white',
+    resizeMode: 'contain'
 
   },
 })

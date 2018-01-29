@@ -14,16 +14,19 @@ class Dashboard extends Component{
 	render(){
 		return (
 		<View style={styles.container}>
+          
           <DashboardContent />
           <ImageDisplay />
+      
 		</View>
 			)
 		}
 	};
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 0,
     backgroundColor: 'white',
+    height: 100
   },
 });
 export default Dashboard;

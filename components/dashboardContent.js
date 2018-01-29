@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import {
 	View,
 	StyleSheet,
-  Image
+  Image,
+  Button
 } from 'react-native';
 import { Text, Container, Header } from 'native-base';
 import { Col, Row, Grid } from "react-native-easy-grid";
@@ -11,23 +12,29 @@ import { Col, Row, Grid } from "react-native-easy-grid";
 
 
 class DashboardContent extends Component{
+  
+  
 	render(){
 		return (
 		<Container style={styles.container}>
-      <Header style={styles.header}>
-        <Text style={styles.headerText}>HOME</Text>
-      </Header>
 			<Grid>
     <Col>
         <Row style={styles.box1}>
+          <Button onPress={() =>
+            this.props.navigation.navigation('TestScreen')}
+            title="go to the TestScreen" />
+
             <Image style={styles.dashboardImg}
             source={require('../assets/dashboard.png')}
             />
+          <Text style={styles.paragraph}> Dashboard </Text>
+
         </Row>
         <Row style={styles.box2}>
             <Image style={styles.dashboardImg}
             source={require('../assets/cloud.png')}
             />
+          <Text style={styles.paragraph}> Applications </Text>
         </Row>
     </Col>
     <Col>
@@ -35,11 +42,13 @@ class DashboardContent extends Component{
           <Image style={styles.dashboardImg}
             source={require('../assets/riskevents.png')}
             />
+            <Text style={styles.paragraph}> Risk Events </Text>
         </Row>
         <Row style={styles.box4}>
             <Image style={styles.dashboardImg}
             source={require('../assets/folder.png')}
             />
+            <Text style={styles.paragraph}> Other </Text>
         </Row>
     </Col>
 </Grid>
@@ -59,6 +68,7 @@ const styles = StyleSheet.create({
     borderBottomWidth:1,
     borderLeftWidth:0,
     borderTopWidth:0,
+    flexDirection: 'column'
     },
     box2: {
       backgroundColor: 'white',
@@ -67,7 +77,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderWidth: 3,
     borderColor: 'grey',
-    borderLeftWidth:0
+    borderLeftWidth:0,
+     borderBottomWidth:0,
+     flexDirection: 'column'
     },
     box3: {
       backgroundColor: 'white',
@@ -78,6 +90,7 @@ const styles = StyleSheet.create({
     borderColor: 'grey',
     borderBottomWidth:1,
     borderTopWidth:0,
+    flexDirection: 'column'
     },
     box4: {
       backgroundColor: 'white',
@@ -85,27 +98,38 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
     alignItems: 'center',
     borderWidth: 3,
-    borderColor: 'grey'
+    borderColor: 'grey',
+    borderBottomWidth:0,
+    flexDirection: 'column'
     },
     dashboardImg: {
-      height: 150,
-      width: 155,
+      height: 100,
+      width: 100,
     },
   container: {
   	flex: 0,
     width: 370,
-    height: 560
+    height: 500
 },
   header: {
     backgroundColor: '#000040',
+    marginBottom: 20,
     width: 390,
+    height:63,
+    justifyContent: 'center',
+        alignItems: 'center',
+    marginTop: -35
 },
   headerText: {
     color: 'white',
-    fontSize: 25,
+    fontSize: 20,
+    fontWeight: 'bold',
+    justifyContent: 'center',
+    alignItems: 'center',
+},paragraph: {
+    textAlign: 'center',
     fontWeight: 'bold'
-
-}
+  }
 })
 
 ;

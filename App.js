@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image, AppRegistry } from 'react-native';
 import {StackNavigator} from 'react-navigation';
 import Dashboard from './screens/LandingScreen.js';
+import TestScreen from './screens/TestScreen.js';
 import HomeScreen from './screens/HomeScreen.js';
 import RiskScreen from './screens/RiskScreen.js';
 import CardList from './components/cardList.js';
@@ -18,9 +19,11 @@ export default class App extends React.Component {
 }
 
 const AppNavigator = StackNavigator({
+   TestScreen: { screen: TestScreen},
   Dashboard: { screen: Dashboard},
+ 
   HomeScreen: { screen: HomeScreen},
-  RiskScreen: { screen: RiskScreen}
+  RiskScreen: { screen: RiskScreen},
   
 
 })
@@ -33,3 +36,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+AppRegistry.registerComponent('MyApp', () => MyApp);
