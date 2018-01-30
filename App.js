@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { StyleSheet, Text, View, Image, AppRegistry } from 'react-native';
 import {StackNavigator} from 'react-navigation';
 import Dashboard from './screens/LandingScreen.js';
+import DashboardVisual from './screens/Dashboard.js';
 import TestScreen from './screens/TestScreen.js';
 import HomeScreen from './screens/HomeScreen.js';
 import RiskScreen from './screens/RiskScreen.js';
@@ -19,8 +20,9 @@ export default class App extends React.Component {
 }
 
 const AppNavigator = StackNavigator({
-  Dashboard: { screen: Dashboard},
-  TestScreen: { screen: TestScreen}, 
+  // DashboardVisual: { screen: DashboardVisual},
+  // Dashboard: { screen: Dashboard},
+  // TestScreen: { screen: TestScreen}, 
   HomeScreen: { screen: HomeScreen},
   RiskScreen: { screen: RiskScreen},
   

@@ -18,7 +18,7 @@ export default class ImageDisplay extends Component {
 
 const componentStyle = StyleSheet.create({
   container: {
-    flex: 0,
+    flex: 1,
     backgroundColor: 'white',
     // marginTop: -20
 
