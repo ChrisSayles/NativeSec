@@ -12,7 +12,7 @@ class DashboardVisual extends Component{
 		return (
 		<View >
           
-         <DashboardVisual />
+         <DashboardVisualComponent />
 
       
 		</View>
