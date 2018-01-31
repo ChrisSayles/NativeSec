@@ -22,7 +22,7 @@ class DashboardContent extends Component{
     <Col>
         <Row style={styles.box1}>
           <Button onPress={() =>
-            this.props.navigation.navigate('Dashboard')}
+            this.props.navigation.navigate('TestScreen')}
             title="go to the Dashboard" />
 
             <Image style={styles.dashboardImg}
@@ -44,7 +44,7 @@ class DashboardContent extends Component{
     <Col>
         <Row style={styles.box3}>
         <Button onPress={() =>
-            this.props.navigation.navigate('RiskScreen')}
+            this.props.navigation.navigate('RiskScreen', {selectedInstance: 'all'})}
             title="go to the RiskScreen" />
           <Image style={styles.dashboardImg}
             source={require('../assets/riskevents.png')}

@@ -16,34 +16,54 @@ export default class CardList extends Component {
 
   render() {  
 
+    let tempObj = {};
     let instances = [];
 
 
     data.riskevents.map(riskevent => {
-      if(!instances.includes(riskevent.appinstance)){
-        instances.push(riskevent.appinstance);
+      if(!tempObj.hasOwnProperty(riskevent.appinstance)){
+        tempObj[riskevent.appinstance] = 1;
+      }
+      else{
+        tempObj[riskevent.appinstance] += 1;
       }
     });
 
-    
+    for (keys in tempObj){
+      console.log(keys);
+      console.log(tempObj[keys]);
+      instances.push({name: keys, errorCount: tempObj[keys]}); 
+    }
 
-    const renderCards = (results) => results.map(result => (
-      <Card style={styles.backgroundColor}>
-        <CardItem 
-        style={styles.backgroundColor}
-        button onPress={() => this.navigate('RiskScreen', {selectedInstance: result})}>
-            <Icon active name="ios-warning" />
-                  <Button 
-                  style={styles.backgroundColor}
-                  >
-              <Text style={styles.text}>{result}</Text>
-          </Button>
-                <Right>
-                  <Icon name="arrow-forward" />
-               </Right>
-         </CardItem>      
-        </Card>
-    ));
+    
+    console.log(tempObj);
+
+    const renderCards = (results) => results.map(result => {
+
+      let errorCount = 0;
+
+        return (
+        <Card style={styles.backgroundColor}>
+          <CardItem 
+          style={styles.backgroundColor}
+          button onPress={() => this.navigate('RiskScreen', {selectedInstance: result.name})}>
+              <Icon active name="ios-warning" /> 
+                <Button 
+                style={styles.backgroundColor}
+                >
+                  <Text style={styles.text}>{result.errorCount}</Text>
+                  <Text style={styles.text}>{result.name}</Text>
+                </Button>
+                  <Right>
+                    <Icon name="arrow-forward" />
+                 </Right>
+           </CardItem>      
+          </Card>
+         );
+
+    });
+
+
 
     return (
       <Container style={styles.container}>
