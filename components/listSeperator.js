@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import { ListView, StyleSheet } from 'react-native';
 import { Container, Header, Content, List, ListItem, Text, Separator } from 'native-base';
+import data from './customData.json';
+
+
+
 export default class ListSeparator extends Component {
 
 
@@ -10,6 +14,31 @@ export default class ListSeparator extends Component {
   }
 
   render() {
+
+    let highErrors = [];
+    let mediumErrors = [];
+    let lowErrors = [];
+
+    data.riskevents.map(riskevent => {
+      if(riskevent.appinstance === riskevent && 
+         riskevent.priority === "High"){
+          highErrors.push(riskevent);  
+      }
+      else if(riskevent.appinstance === riskevent && 
+              riskevent.priority === "Medium"){
+          mediumErrors.push(riskevent);
+      }
+      else if(riskevent.appinstance === riskevent && 
+              riskevent.priority === "Low"){
+          lowErrors.push(riskevent);
+      }
+    });
+
+
+    const renderErrors = (instance) => 
+
+
+
     //console.log("List seperator: " + this.props.clickedInstance);
     console.log("List seperator: " + this.selectedInstance);
 

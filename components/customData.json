@@ -43,7 +43,7 @@
         ]
       }],
       "category": "Policy alert",
-      "priority": "High",
+      "priority": "Low",
       "status": "Open",
       "createdon": "2017-10-25T17:33:55.000Z",
       "realeventtime": "2017-10-25T17:17:29.000Z"
@@ -135,7 +135,7 @@
         ]
       }],
       "category": "Policy alert",
-      "priority": "High",
+      "priority": "Medium",
       "status": "Open",
       "createdon": "2017-10-25T17:33:56.000Z",
       "realeventtime": "2017-10-25T17:17:44.000Z"
