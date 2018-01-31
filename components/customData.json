@@ -102,7 +102,7 @@
       "appinstance": "box_01",
       "appinstanceid": "e4dc5876-7253-3d41-911d-0f065c8da93d",
       "snapdate": "2017-10-25",
-      "title": "DeleteVpnConnection action in EC2 VPN \"vpn-de0d1fbf\"",
+      "title": "DeleteVpnConnection action in AWS VPN \"vpn-de0d1fbf\"",
       "additionalDetails": [{
         "Details": [{
             "name": "Actor",
