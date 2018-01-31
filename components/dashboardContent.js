@@ -72,7 +72,7 @@ class DashboardContent extends Component{
 
 const styles = StyleSheet.create({
    box1: {
-     backgroundColor: 'white',
+     backgroundColor: '#dee0e0',
      width: 200,
      justifyContent: 'center',
    alignItems: 'center',
@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
    flexDirection: 'column'
    },
    box2: {
-     backgroundColor: 'white',
+     backgroundColor: '#dee0e0',
      width: 200,
      justifyContent: 'center',
    alignItems: 'center',
@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column'
    },
    box3: {
-     backgroundColor: 'white',
+     backgroundColor: '#dee0e0',
      width: 200,
      justifyContent: 'center',
    alignItems: 'center',
@@ -106,7 +106,7 @@ const styles = StyleSheet.create({
    flexDirection: 'column'
    },
    box4: {
-     backgroundColor: 'white',
+     backgroundColor: '#dee0e0',
      width: 200,
      justifyContent: 'center',
    alignItems: 'center',
