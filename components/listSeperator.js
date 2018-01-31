@@ -166,7 +166,7 @@ const styles = StyleSheet.create({
       flex: 1,
       width: 375,
       height: 800,
-      marginTop: -340,
+      marginTop: -475,
       backgroundColor: '#809ab0',
     },
   swipeHeader: {

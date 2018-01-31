@@ -10,6 +10,7 @@ import data from '../components/customData.json';
 
 import ImageDisplay from '../components/imageComponent.js';
 import ListSeperator from '../components/listSeperator.js';
+import ImageDisplayLogo from '../components/imageComponentLogo.js';
 
 class RiskScreen extends Component{
 
@@ -28,8 +29,8 @@ class RiskScreen extends Component{
 
 		return (
 			<View style={styles.container}>
-          <Text >  { params.selectedInstance }  </Text>
-          <ImageDisplay />
+         
+          <ImageDisplayLogo />
           <ListSeperator clickedInstance = {params.selectedInstance} />
 			</View>
 			);

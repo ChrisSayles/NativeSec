@@ -7,12 +7,14 @@ import {
 } from 'react-native';
 import ImageDisplay from '../components/imageComponent.js';
 import CardList from '../components/cardList.js';
+import ImageDisplayLogo from '../components/imageComponentLogo.js';
+
 
 class HomeScreen extends Component{
 	render(){
 		return (
 			<View style={styles.container}>
-				<ImageDisplay />
+				<ImageDisplayLogo />
 				<CardList navigation={this.props.navigation}/>
 
 			</View>

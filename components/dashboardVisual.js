@@ -25,7 +25,7 @@ export default class DashboardVisualComponent extends Component {
               </View>
               <View style={styles.row}>
                 <Text>
-                  Jamison.Smith@Oracle.com
+                  Jane.Smith@Oracle.com
                 </Text>
                 <Badge style={styles.buttonSize}>
                 <Text style={{ color: 'white' }}>38</Text>
@@ -33,7 +33,7 @@ export default class DashboardVisualComponent extends Component {
               </View>
               <View style={styles.row}>
                 <Text>
-                  William.Prince@Oracle.com
+                  Will.Prince@Oracle.com
                 </Text>
                 <Badge style={styles.buttonSize}>
                 <Text style={{ color: 'white' }}>17</Text>
@@ -114,6 +114,6 @@ const styles = StyleSheet.create({
   buttonSize: {
     height: 20,
     flexDirection: 'row',
-    width: 100,
+    width: 120,
   }
 });
