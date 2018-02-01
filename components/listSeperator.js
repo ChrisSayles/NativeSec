@@ -56,7 +56,7 @@ export default class ListSeparator extends Component {
 
 
     const renderErrors = () => data.riskevents.map(riskevent => {
-      if(riskevent.appinstance === this.selectedInstance && 
+      if((riskevent.appinstance === this.selectedInstance || this.selectedInstance === "all") && 
          riskevent.priority === "High" && highCount < 1){
           //highErrors.push(riskevent);  
           highCount++;
@@ -73,7 +73,7 @@ export default class ListSeparator extends Component {
             </View>
           );
       }
-      else if(riskevent.appinstance === this.selectedInstance && 
+      else if((riskevent.appinstance === this.selectedInstance || this.selectedInstance === "all") && 
               riskevent.priority === "High" && highCount > 0){
           //mediumErrors.push(riskevent);
         highCount++;
@@ -85,7 +85,7 @@ export default class ListSeparator extends Component {
             </View>
           );
       }
-      else if(riskevent.appinstance === this.selectedInstance && 
+      else if((riskevent.appinstance === this.selectedInstance || this.selectedInstance === "all") && 
          riskevent.priority === "Medium" && highCount < 1){
           //highErrors.push(riskevent);  
           mediumCount++;
@@ -100,7 +100,7 @@ export default class ListSeparator extends Component {
             </View>
           );
       }
-      else if(riskevent.appinstance === this.selectedInstance && 
+      else if((riskevent.appinstance === this.selectedInstance || this.selectedInstance === "all") && 
               riskevent.priority === "Medium" && highCount > 0){
           //mediumErrors.push(riskevent);
         mediumCount++;
@@ -112,7 +112,7 @@ export default class ListSeparator extends Component {
             </View>
           );
       }
-      else if(riskevent.appinstance === this.selectedInstance && 
+      else if((riskevent.appinstance === this.selectedInstance || this.selectedInstance === "all") && 
          riskevent.priority === "Low" && highCount < 1){
           //highErrors.push(riskevent);  
           lowCount++;
@@ -127,7 +127,7 @@ export default class ListSeparator extends Component {
             </View>
           );
       }
-      else if(riskevent.appinstance === this.selectedInstance && 
+      else if((riskevent.appinstance === this.selectedInstance || this.selectedInstance === "all") && 
               riskevent.priority === "Low" && highCount > 0){
           //mediumErrors.push(riskevent);
         lowCount++;
@@ -197,7 +197,7 @@ const styles = StyleSheet.create({
     container: {
       flex: 1,
       width: 375,
-      height: 800,
+      height: 1000,
       marginTop: -475,
       backgroundColor: '#809ab0',
     },
