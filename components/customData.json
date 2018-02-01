@@ -56,7 +56,7 @@
       "appinstance": "awse2e_01",
       "appinstanceid": "e4dc5876-7253-3d41-911d-0f065c8da93d",
       "snapdate": "2017-10-25",
-      "title": "DeleteVpnConnection action in EC2 VPN \"vpn-de0d1fbf\"",
+      "title": "DeleteVpnConnection action in EC2 VPN \"vpn-de24312\"",
       "additionalDetails": [{
         "Details": [{
             "name": "Actor",
@@ -68,7 +68,7 @@
           },
           {
             "name": "Resource name",
-            "value": "[vpn-de0d1fbf]"
+            "value": "[vpn-de3242342]"
           },
           {
             "name": "Action",
@@ -148,7 +148,7 @@
       "appinstance": "Office_365",
       "appinstanceid": "e4dc5876-7253-3d41-911d-0f065c8da93d",
       "snapdate": "2017-10-25",
-      "title": "DeleteVpnConnection action in EC2 VPN \"vpn-de0d1fbf\"",
+      "title": "DeleteVpnConnection action in EC2 VPN \"vpn-de23423\"",
       "additionalDetails": [{
         "Details": [{
             "name": "Actor",
@@ -194,7 +194,7 @@
       "appinstance": "Oracle",
       "appinstanceid": "e4dc5876-7253-3d41-911d-0f065c8da93d",
       "snapdate": "2017-10-25",
-      "title": "DeleteVpnConnection action in EC2 VPN \"vpn-de0d1fbf\"",
+      "title": "DeleteVpnConnection action in EC2 VPN \"vpn-de3453452\"",
       "additionalDetails": [{
         "Details": [{
             "name": "Actor",

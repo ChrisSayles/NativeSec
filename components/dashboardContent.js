@@ -30,7 +30,7 @@ class DashboardContent extends Component{
            />
          <Button onPress={() =>
            this.props.navigation.navigate('TestScreen')}
-           
+           color="#black"
            title="Dashboard" />
 
        </Row>
@@ -42,7 +42,8 @@ class DashboardContent extends Component{
          <Button style={styles.hyperlink} onPress={() =>
 
            this.props.navigation.navigate('HomeScreen')}
-           title="Applications" />
+           title="Applications" 
+           color="#black"/>
        </Row>
    </Col>
    <Col>
@@ -53,7 +54,8 @@ class DashboardContent extends Component{
            />
            <Button onPress={() =>
            this.props.navigation.navigate('RiskScreen', {selectedInstance: 'all'})}
-           title="Risk Events" />
+           title="Risk Events" 
+           color="#black"/>
        </Row>
        <Row style={styles.box4}>
            <Image style={styles.dashboardImg}
@@ -61,7 +63,8 @@ class DashboardContent extends Component{
            />
            <Button onPress={() =>
            this.props.navigation.navigate('RiskScreen', {selectedInstance: 'all'})}
-           title="Other" />
+           title="Other"
+           color="#black" />
        </Row>
    </Col>
 </Grid>

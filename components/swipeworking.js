@@ -56,35 +56,41 @@ export default class ListSeparator extends Component {
 
 
     const renderErrors = () => data.riskevents.map(riskevent => {
-      if((riskevent.appinstance === this.selectedInstance || this.selectedInstance === "all") && 
+      if(riskevent.appinstance === this.selectedInstance && 
          riskevent.priority === "High" && highCount < 1){
           //highErrors.push(riskevent);  
           highCount++;
           return (
             <View>
-              <Separator bordered style={styles.swipeHeader}>
-                <Text style={styles.swipeHeaderText}>HIGH</Text>
-              </Separator>
-            <Content scrollEnabled={false}>
-          <SwipeRow
+            <Separator bordered style={styles.swipeHeader}>
+                  <Text style={styles.swipeHeaderText}>"HIGH"</Text>
+               </Separator>
+          
+              <Content scrollEnabled={false}>
+          <SwipeRow 
             leftOpenValue={75}
             rightOpenValue={-75}
             left={
-              <Button success  onPress={() => alert('Add')}>
-                <Icon style={styles.swipeComponentGreen} name="add" />
+              <Button success 
+              style={styles.swipeComponentIcon}
+              onPress={() => alert('Add')}>
+                <Icon style={styles.swipeComponentIcon} active name="add" />
               </Button>
             }
             body={
-              <View>
-            
+              <View>      
+                
               <ListItem >
                 <Text >{riskevent.title}</Text>
               </ListItem>
-              </View>
-              }
+
+            </View>
+            }
             right={
-              <Button danger onPress={() => alert('Trash')}>
-                <Icon style={styles.swipeComponentRed}active name="trash" />
+              <Button danger 
+              style={styles.swipeComponentRed}
+              onPress={() => alert('Trash')}>
+                <Icon style={styles.swipeComponentIcon} active name="trash" />
               </Button>
             }
           />
@@ -92,107 +98,41 @@ export default class ListSeparator extends Component {
             </View>
           );
       }
-      else if((riskevent.appinstance === this.selectedInstance || this.selectedInstance === "all") && 
-              riskevent.priority === "High" && highCount > 0){
-          //mediumErrors.push(riskevent);
-        highCount++;
-          return (
-            <View>
-              <Separator bordered style={styles.swipeHeader}>
-                <Text style={styles.swipeHeaderText}>HIGH</Text>
-              </Separator>
-            <Content scrollEnabled={false}>
-          <SwipeRow
-            leftOpenValue={75}
-            rightOpenValue={-75}
-            left={
-              <Button success onPress={() => alert('Add')}>
-                <Icon style={styles.swipeComponentGreen} name="add" />
-              </Button>
-            }
-            body={
-              <View>
-            
-              <ListItem >
-                <Text >{riskevent.title}</Text>
-              </ListItem>
-              </View>
-              }
-            right={
-              <Button danger onPress={() => alert('Trash')}>
-                <Icon style={styles.swipeComponentRed} active name="trash" />
-              </Button>
-            }
-          />
-        </Content>
-            </View>
-          );
-      }
-      else if((riskevent.appinstance === this.selectedInstance || this.selectedInstance === "all") && 
-         riskevent.priority === "Medium" && highCount < 1){
-          //highErrors.push(riskevent);  
-          mediumCount++;
-          return (
-            <View>
-              <Separator bordered style={styles.swipeHeader}>
-                <Text style={styles.swipeHeaderText}>MEDIUM</Text>
-              </Separator>
-            <Content scrollEnabled={false}>
-          <SwipeRow
-            leftOpenValue={75}
-            rightOpenValue={-75}
-            left={
-              <Button success onPress={() => alert('Add')}>
-                <Icon  style={styles.swipeComponentGreen} active name="add" />
-              </Button>
-            }
-            body={
-              <View>
-            
-              <ListItem >
-                <Text >{riskevent.title}</Text>
-              </ListItem>
-              </View>
-              }
-            right={
-              <Button danger onPress={() => alert('Trash')}>
-                <Icon style={styles.swipeComponentRed} active name="trash" />
-              </Button>
-            }
-          />
-        </Content>
-            </View>
-          );
-      }
-      else if((riskevent.appinstance === this.selectedInstance || this.selectedInstance === "all") && 
+      else if(riskevent.appinstance === this.selectedInstance && 
               riskevent.priority === "Medium" && highCount > 0){
           //mediumErrors.push(riskevent);
         mediumCount++;
           return (
             <View>
-              <Separator bordered style={styles.swipeHeader}>
-                <Text style={styles.swipeHeaderText}>MEDIUM</Text>
-              </Separator>
-            <Content scrollEnabled={false}>
-          <SwipeRow
+            <Separator bordered style={styles.swipeHeader}>
+                  <Text style={styles.swipeHeaderText}>"MEDIUM"</Text>
+               </Separator>
+          
+              <Content scrollEnabled={false}>
+          <SwipeRow 
             leftOpenValue={75}
             rightOpenValue={-75}
             left={
-              <Button success onPress={() => alert('Add')}>
-                <Icon style={styles.swipeComponentGreen} active name="add" />
+              <Button success 
+              style={styles.swipeComponentIcon}
+              onPress={() => alert('Add')}>
+                <Icon style={styles.swipeComponentIcon} active name="add" />
               </Button>
             }
             body={
-              <View>
-            
+              <View>      
+                
               <ListItem >
                 <Text >{riskevent.title}</Text>
               </ListItem>
-              </View>
-              }
+
+            </View>
+            }
             right={
-              <Button danger onPress={() => alert('Trash')}>
-                <Icon style={styles.swipeComponentRed} active name="trash" />
+              <Button danger 
+              style={styles.swipeComponentRed}
+              onPress={() => alert('Trash')}>
+                <Icon style={styles.swipeComponentIcon} active name="trash" />
               </Button>
             }
           />
@@ -200,35 +140,41 @@ export default class ListSeparator extends Component {
             </View>
           );
       }
-      else if((riskevent.appinstance === this.selectedInstance || this.selectedInstance === "all") && 
+      else if(riskevent.appinstance === this.selectedInstance && 
          riskevent.priority === "Low" && highCount < 1){
           //highErrors.push(riskevent);  
           lowCount++;
           return (
             <View>
-              <Separator bordered style={styles.swipeHeader}>
-                <Text style={styles.swipeHeaderText}>LOW</Text>
-              </Separator>
-            <Content scrollEnabled={false}>
-          <SwipeRow
+            <Separator bordered style={styles.swipeHeader}>
+                  <Text style={styles.swipeHeaderText}>"LOW"</Text>
+               </Separator>
+          
+              <Content scrollEnabled={false}>
+          <SwipeRow 
             leftOpenValue={75}
             rightOpenValue={-75}
             left={
-              <Button success onPress={() => alert('Add')}>
-                <Icon style={styles.swipeComponentGreen} active name="add" />
+              <Button success 
+              style={styles.swipeComponentIcon}
+              onPress={() => alert('Add')}>
+                <Icon style={styles.swipeComponentIcon} active name="add" />
               </Button>
             }
             body={
-              <View>
-            
+              <View>      
+                
               <ListItem >
                 <Text >{riskevent.title}</Text>
               </ListItem>
-              </View>
-              }
+
+            </View>
+            }
             right={
-              <Button danger onPress={() => alert('Trash')}>
-                <Icon style={styles.swipeComponentRed} active name="trash" />
+              <Button danger 
+              style={styles.swipeComponentRed}
+              onPress={() => alert('Trash')}>
+                <Icon style={styles.swipeComponentIcon} active name="trash" />
               </Button>
             }
           />
@@ -236,35 +182,35 @@ export default class ListSeparator extends Component {
             </View>
           );
       }
-      else if((riskevent.appinstance === this.selectedInstance || this.selectedInstance === "all") && 
+      else if(riskevent.appinstance === this.selectedInstance && 
               riskevent.priority === "Low" && highCount > 0){
           //mediumErrors.push(riskevent);
         lowCount++;
           return (
-           <View>
-              <Separator bordered style={styles.swipeHeader}>
-                <Text style={styles.swipeHeaderText}>LOW</Text>
-              </Separator>
-            <Content scrollEnabled={false}>
+            <View>
+               <Content scrollEnabled={false}>
           <SwipeRow
             leftOpenValue={75}
             rightOpenValue={-75}
             left={
               <Button success onPress={() => alert('Add')}>
-                <Icon  style={styles.swipeComponentGreen} active name="add" />
+                <Icon active name="add" />
               </Button>
             }
             body={
-              <View>
-            
+              <View>      
+                <Separator bordered style={styles.swipeHeader}>
+                  <Text style={styles.swipeHeaderText}>"LOW"</Text>
+               </Separator>
               <ListItem >
                 <Text >{riskevent.title}</Text>
               </ListItem>
-              </View>
-              }
+
+            </View>
+            }
             right={
               <Button danger onPress={() => alert('Trash')}>
-                <Icon style={styles.swipeComponentRed} active name="trash" />
+                <Icon active name="trash" />
               </Button>
             }
           />
@@ -338,17 +284,14 @@ const styles = StyleSheet.create({
 
     backgroundColor: '#687785',
     color: 'white',
-    fontWeight: 'bold',
-    height: 10,
-    paddingTop: -40,
-
+    fontWeight: 'bold'
 
 },
   swipeHeaderText: {
     backgroundColor: '#687785',
     color: 'white',
     fontWeight: 'bold',
-    height: 15
+    height: 40
 },
   swipeComponentRed: {
     backgroundColor: '#b20000',
@@ -364,12 +307,6 @@ const styles = StyleSheet.create({
 },
   swipeComponentIconMedium: {
     height: 170
-},
-  swipeComponentGreen: {
-    height: 75
-},
-  swipeComponentRed: {
-    height: 75
 }
 })
 
