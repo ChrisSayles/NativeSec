@@ -61,7 +61,7 @@ export default class ListSeparator extends Component {
           //highErrors.push(riskevent);  
           highCount++;
           return (
-            <View>
+            <View >
               <Separator bordered style={styles.swipeHeader}>
                 <Text style={styles.swipeHeaderText}>HIGH</Text>
               </Separator>
@@ -242,8 +242,8 @@ export default class ListSeparator extends Component {
         lowCount++;
           return (
            <View>
-              <Separator bordered style={styles.swipeHeader}>
-                <Text style={styles.swipeHeaderText}>LOW</Text>
+              <Separator bordered>
+                <Text >WAY LOW</Text>
               </Separator>
             <Content scrollEnabled={false}>
           <SwipeRow
@@ -340,7 +340,6 @@ const styles = StyleSheet.create({
     color: 'white',
     fontWeight: 'bold',
     height: 10,
-    paddingTop: -40,
 
 
 },
