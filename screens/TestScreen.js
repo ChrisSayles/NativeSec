@@ -55,8 +55,15 @@ export default class DashboardVisualComponent extends Component {
             </CardItem>
          </Card>
          <Card style={styles.margins}>
-            <CardItem header style={styles.dashboardFooterText}>
-              <Text style={styles.dashboardFooterTextSize}>Dismiss Dashboard</Text>
+            <CardItem header style={styles.cardHeader}>
+              <Text>Map View:</Text>
+            </CardItem>
+            <CardItem style={styles.cardStyle}>
+              <Body>
+              <View style={styles.row}>
+                <Image source={{uri: 'https://www.oracle.com/us/assets/cw20v1-investigate-3-3497451.jpg'}} style={{height: 250, width: 330, flex: 0}}/>
+              </View>
+              </Body>
             </CardItem>
          </Card>
         </Content>
@@ -70,10 +77,10 @@ const styles = StyleSheet.create({
       width: 380,
       height: 800,
       marginBottom: 60,
-      backgroundColor: '#333333',
+      backgroundColor: '#dee0e0',
   }, 
   margins: {
-    marginTop: 40
+    marginTop: 10
   },
   cardHeader: {
     flex:1,
