@@ -22,7 +22,7 @@ export default class App extends React.Component {
 const AppNavigator = StackNavigator({
   
   Dashboard: { screen: Dashboard},
-  // DashboardVisual: { screen: DashboardVisual},
+  DashboardVisual: { screen: DashboardVisual},
   TestScreen: { screen: TestScreen}, 
   HomeScreen: { screen: HomeScreen},
   RiskScreen: { screen: RiskScreen},

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { ListView, StyleSheet, View } from 'react-native';
-import { Container, Header, Content, List, ListItem, Text, Separator } from 'native-base';
+import { Container, Header, Content, List, ListItem, Text, Separator, SwipeRow, Button, Icon } from 'native-base';
 import data from './customData.json';
 
 
@@ -19,9 +19,39 @@ export default class ListSeparator extends Component {
     let mediumCount = 0;
     let lowCount = 0;
 
+// SWIPE CODE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// <View>
+//           <Content scrollEnabled={false}>
+//           <SwipeRow
+//             leftOpenValue={75}
+//             rightOpenValue={-75}
+//             left={
+//               <Button success onPress={() => alert('Add')}>
+//                 <Icon active name="add" />
+//               </Button>
+//             }
+//             body={
+//               <View>      
+//                 <Separator bordered style={styles.swipeHeader}>
+//                   <Text style={styles.swipeHeaderText}>"HIGH"</Text>
+//                </Separator>
+//               <ListItem >
+//                 <Text >{riskevent.title}</Text>
+//               </ListItem>
 
+//             </View>
+//             }
+//             right={
+//               <Button danger onPress={() => alert('Trash')}>
+//                 <Icon active name="trash" />
+//               </Button>
+//             }
+//           />
+//         </Content>
+//             </View>
+// SWIPE CODE END!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-
+ 
     
 
 
@@ -32,12 +62,14 @@ export default class ListSeparator extends Component {
           highCount++;
           return (
             <View>
+          
               <Separator bordered style={styles.swipeHeader}>
                 <Text style={styles.swipeHeaderText}>HIGH</Text>
               </Separator>
               <ListItem >
                 <Text >{riskevent.title}</Text>
               </ListItem>
+
             </View>
           );
       }
